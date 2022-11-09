@@ -34,85 +34,197 @@
 
 }
 
-
+/* !Book 1 */
 .contenedor__libros .libro1{
     background-color: blue;
     border-radius:15px 15px 0 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    animation: subir 1s 1s alternate ease infinite;
+    position: relative;
 }
 .contenedor__libros .libro1 div{
     background-color: white;
     width: 2rem;
     height: 0.5rem;
     border-radius: 20px;
-    margin-top: 1rem;
+    margin: 1rem auto;
     
 
 }
+.contenedor__libros .libro1::before{
+    overflow: hidden;
+    content: "1984";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 0rem;
+    width: 0rem;
+    position: absolute;
+    bottom: 9rem;
+    left: 0rem;
+    background-color: rgba(29, 1, 1, 0.6);
+    z-index: 1;
+    color: white;
+    font-size: 2.3rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    transition: 1s all ease;
+    
+}
+.contenedor__libros .libro1:hover::before{
+    height: 5rem;
+    width: 10rem;
+    border: 2px solid black;
+
+}
+.contenedor__libros .libro1:hover{
+    animation: subir 1s alternate ease;
+
+}
+
+
+/* !Book 2 */
+
 
 .contenedor__libros .libro2{
     background-color: rgb(14, 178, 14);
     border-radius:15px 15px 0 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    animation: subir 1s 1.5s alternate ease infinite;
+    position: relative;
 }
 .contenedor__libros .libro2 div{
     background-color: white;
     width: 2rem;
     height: 0.5rem;
     border-radius: 20px;
-    margin-top: 0.4rem;
+    margin: 0.5rem auto
 
 }
+
+.contenedor__libros .libro2::before{
+    overflow: hidden;
+    content: "Diez Negritos";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 0rem;
+    width: 0rem;
+    position: absolute;
+    bottom: 9rem;
+    left: 0rem;
+    background-color: rgba(29, 1, 1, 0.6);
+    z-index: 1;
+    color: white;
+    font-size: 2.3rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    transition: 1s all ease;
+    text-align: center;
+    
+}
+.contenedor__libros .libro2:hover::before{
+    height: 5rem;
+    width: 10rem;
+    border: 2px solid black;
+
+}
+.contenedor__libros .libro2:hover{
+    animation: subir 1s alternate ease;
+
+}
+
+/* !Book 3 */
 .contenedor__libros .libro3{
     background-color: rgb(247, 0, 0);
     border-radius:15px 15px 0 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-    animation: subir 1s 1.75s alternate ease infinite;
+    position: relative;
 }
 .contenedor__libros .libro3 div{
     background-color: white;
     width: 2rem;
     height: 0.5rem;
     border-radius: 20px;
-    margin-bottom: 0.4rem;
+    margin: 0.5rem auto;
 
 }
+.contenedor__libros .libro3::before{
+    overflow: hidden;
+    content: "La Odisea";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 0rem;
+    width: 0rem;
+    position: absolute;
+    bottom: 9rem;
+    left: 0rem;
+    background-color: rgba(29, 1, 1, 0.6);
+    z-index: 1;
+    color: white;
+    font-size: 2.3rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    transition: 1s all ease;
+    text-align: center;
+    
+}
+.contenedor__libros .libro3:hover::before{
+    height: 5rem;
+    width: 9.5rem;
+    border: 2px solid black;
+
+}
+.contenedor__libros .libro3:hover{
+    animation: subir 1s alternate ease;
+
+}
+/* !Book 4 */
 .contenedor__libros .libro4{
     background-color: rgb(249, 0, 149);
     border-radius:15px 15px 0 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    animation: subir 1s 2s ease infinite alternate;
+    position: relative;
 }
 .contenedor__libros .libro4 div{
     background-color: white;
     width: 2rem;
     height: 0.5rem;
     border-radius: 20px;
-    margin-top: 0.4rem;
+    margin: 0.5rem auto;
+
+}
+.contenedor__libros .libro4::before{
+    overflow: hidden;
+    content: "Rey Arturo";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 0rem;
+    width: 0rem;
+    position: absolute;
+    bottom: 9rem;
+    left: 0rem;
+    background-color: rgba(29, 1, 1, 0.6);
+    z-index: 1;
+    color: white;
+    font-size: 2.3rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    transition: 1s all ease;
+    text-align: center;
+    
+}
+.contenedor__libros .libro4:hover::before{
+    height: 5rem;
+    width: 9.5rem;
+    border: 2px solid black;
+
+}
+.contenedor__libros .libro4:hover{
+    animation: subir 1s alternate ease;
 
 }
 
 
 
-
 @keyframes subir{
     0%{transform:translateY(0);}
-    50%{transform:translateY(-15px);}
-    0%{transform:translateY(0);}
+    25%{transform:translateY(-10px);}
+    50%{transform:translateY(0);}
+    75%{transform:translateY(-10px);}
+    100%{transform:translateY(0px);}
 }
 
 
@@ -123,6 +235,3 @@
     height: 10px;
     flex-basis: 100%;
 }
-
-
-
