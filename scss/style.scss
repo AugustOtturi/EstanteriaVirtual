@@ -39,8 +39,8 @@ main {
                 flex-wrap: wrap;
                 a {
                     .libro{
-                        width: 6rem;
-                        height: 6rem;
+                        width: 5.5rem;
+                        height: 5.5rem;
                         background-color: white;
                         position: absolute;
                         border-radius: 50%;
@@ -78,7 +78,7 @@ main {
                         width: 100%;
                         display: block;
                         transform: scaleX(0);
-                        transition: 0.4s all ease;
+                        transition: 0.1s all ease;
                         border-radius: 10px 10px 0 0;
                         &:nth-child(1) {
                             background-color: blue;
@@ -201,11 +201,28 @@ main {
                     a {
                         width: 22vw;
                         .libro{
-                            font-size: 9vw;
+                            font-size: 5vw;
                         }
                     }
                 }
             }
         }
     }
+}
+@media (max-width: 446px){
+    main{
+        .container-fluid{
+            .row{
+                .col-12{
+                    a{
+                        .libro{
+                            height: 3rem;
+                            width: 3rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
 }
