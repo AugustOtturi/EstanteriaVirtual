@@ -1,132 +1,208 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+html {
+    padding: 0;
+}
+@import url('https://fonts.googleapis.com/css2?family=Quattrocento:wght@700&display=swap');
 
-@mixin flex($justify:normal, $align:stretch, $direction:row) {
+@mixin flex($justify: normal, $align: stretch, $direction: row) {
     display: flex;
     justify-content: $justify;
     align-items: $align;
     flex-direction: $direction;
 }
+@mixin background-img($image, $position, $repeat, $size) {
+    background-image: $image;
+    background-position: $position;
+    background-repeat: $repeat;
+    background-size: $size;
+}
 
-main{
-    .container-fluid{
-        height: 100vh;
-        width: 100vw;
+main {
+    .container-fluid {
+        h1 {
+            text-align: center;
+            font-size: 5vw;
+            font-style: italic;
+        }
+        height: 100%;
+        width: 100%;
         background-color: aqua;
-        .row{
-            .col-12{
-                position: absolute;
-                left: 50%;
-                top: 50%;
-                transform: translate(-50% , -50%);
+        .row {
+            .col-12 {
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 flex-wrap: wrap;
-                .libro{
-                    width: 5vw;
-                    height: 30vh;
+                a {
+                    .libro{
+                        width: 6rem;
+                        height: 6rem;
+                        background-color: white;
+                        position: absolute;
+                        border-radius: 50%;
+                        border: 2px solid;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        color: black;
+                        @include flex(center, center);
+                        font-size: 3vw;
+                        font-family: 'Quattrocento', serif;
+                    }
+                    width: 12vw;
+                    height: 45vh;
                     background: rgb(245, 243, 243);
                     margin: 1rem 1rem 0.2rem 1rem;
                     border: 2px solid black;
                     border-radius: 10px 10px 0 0;
                     cursor: pointer;
-                    &:nth-child(1){
+                    position: relative;
+                    &::before{
+                        content:"";
+                        width: 100%;
+                        height: 2rem;
+                        border-top: 4px solid black;
+                        border-bottom: 4px solid black;
+                        display: block;
+                        position: absolute;
+                        margin-top: 2rem;
+                    }
+                    &::after {
+                        content: "";
+                        background-color: rgba(0, 0, 0, 0.4);
+                        height: 100%;
+                        width: 100%;
+                        display: block;
+                        transform: scaleX(0);
+                        transition: 0.4s all ease;
+                        border-radius: 10px 10px 0 0;
+                        &:nth-child(1) {
+                            background-color: blue;
+                        }
+                    }
+
+                    &:nth-child(1) {
                         background-color: blue;
-                        @include flex(flex-start,center ,column)
+                        &:hover::after {
+                            transform: scaleX(1);
+                            @include background-img(url(../assets/club_5am.jpg), center, no-repeat, cover);
+                        }
                     }
-                    &:nth-child(2){
-                        background-color:burlywood ;
-                        @include flex(flex-end,center ,column)
+                    &:nth-child(2) {
+                        background-color: burlywood;
+                        &:hover::after {
+                            transform: scaleX(1);
+                            @include background-img(url(../assets/1984.jpg), center, no-repeat, cover);
+                        }
                     }
-                    &:nth-child(3){
-                        background-color:brown ;
-                        @include flex(center,center ,column)
+                    &:nth-child(3) {
+                        background-color: brown;
+                        &:hover::after {
+                            transform: scaleX(1);
+                            @include background-img(url(../assets/narnia.jpg), center, no-repeat, 100% 100%);
+                        }
                     }
-                    &:nth-child(4){
-                        background-color:rgb(226, 25, 25) ;
-                        @include flex(center,center ,column)
+                    &:nth-child(4) {
+                        background-color: rgb(226, 25, 25);
+                        &:hover::after {
+                            transform: scaleX(1);
+                            @include background-img(url(../assets/rey_arturo.jpg), center, no-repeat, 100% 100%);
+                        }
                     }
-                    &:nth-child(5){
-                        background-color:rgb(145, 177, 3) ;
-                        @include flex(flex-end,center ,column)
+                    &:nth-child(5) {
+                        background-color: rgb(145, 177, 3);
+                        &:hover::after {
+                            transform: scaleX(1);
+                            @include background-img(url(../assets/quijote.jpg), center, no-repeat, 100% 100%);
+                        }
                     }
-                    &:nth-child(6){
-                        background-color:rgb(7, 73, 255) ;
-                        @include flex(flex-end,center ,column)
+                    &:nth-child(6) {
+                        background-color: rgb(7, 73, 255);
+                        &:hover::after {
+                            transform: scaleX(1);
+                            @include background-img(url(../assets/hrpotter.jpg), center, no-repeat, 105% 100%);
+                        }
                     }
-                    &:nth-child(7){
-                        background-color:rgb(238, 16, 134) ;
-                        @include flex(flex-start,center ,column)
+                    &:nth-child(7) {
+                        background-color: rgb(238, 16, 134);
+                        &:hover::after {
+                            transform: scaleX(1);
+                            @include background-img(url(../assets/vigilar_castigar.jpg), center, no-repeat, cover);
+                        }
                     }
-                    &:nth-child(8){
-                        background-color:rgb(34, 255, 0) ;
-                        @include flex(flex-start,center ,column)
+                    &:nth-child(8) {
+                        background-color: rgb(34, 255, 0);
+                        &:hover::after {
+                            transform: scaleX(1);
+                            @include background-img(url(../assets/padre_pobre.jpg), center, no-repeat, 100% 100%);
+                        }
                     }
-                    &:nth-child(9){
-                        background-color:rgb(212, 173, 154) ;
-                        @include flex(flex-start,center ,column)
+                    &:nth-child(9) {
+                        background-color: rgb(212, 173, 154);
+                        &:hover::after {
+                            transform: scaleX(1);
+                            @include background-img(url(../assets/diez_negritos.png), center, no-repeat, 100% 100%);
+                        }
                     }
-                    &:nth-child(10){
-                        background-color:rgb(0, 4, 246) ;
-                        @include flex(center,center ,column)
+                    &:nth-child(10) {
+                        background-color: rgb(0, 4, 246);
+                        &:hover::after {
+                            transform: scaleX(1);
+                            @include background-img(url(../assets/drjekyll.jpg), center, no-repeat, 100% 100%);
+                        }
                     }
-                    &:nth-child(11){
-                        background-color:rgb(252, 0, 59) ;
-                        @include flex(flex-start,center ,column)
+                    &:nth-child(11) {
+                        background-color: rgb(252, 0, 59);
+                        &:hover::after {
+                            transform: scaleX(1);
+                            @include background-img(url(../assets/divinacomedia.jpg), center, no-repeat, cover);
+                        }
                     }
-                    &:nth-child(12){
-                        background-color:rgb(255, 145, 0) ;
-                        @include flex(flex-end,center ,column)
+                    &:nth-child(12) {
+                        background-color: rgb(255, 145, 0);
+                        &:hover::after {
+                            transform: scaleX(1);
+                            @include background-img(url(../assets/iliada.jpg), center, no-repeat, cover);
+                        }
                     }
-                }
-               
-
-
-
-
-
-
-                .base{
-                    width: 100%;
-                    height: 2vh;
-                    background-color: black;
-                    flex-basis: 100%;
                 }
             }
         }
     }
 }
 
-
-
-
-.texto{
-   vertical-align: bottom;
-   margin-bottom: 0;
-   font-size: 1vw;
+.texto {
+    vertical-align: bottom;
+    margin-bottom: 0;
+    font-size: 1vw;
 }
-.linea{
+.linea {
     width: 100%;
     height: 2px;
     background: black;
     margin: 0.2rem 0;
-    
 }
 
-
-
-@media (max-width: 1020px){
-
-    main{
-        .container-fluid{
-            .row{
-                .col-12{
-                    .libro{
-                        width: 10vw;
+@media (max-width: 772px) {
+    main {
+        .container-fluid {
+            h1 {
+                font-size:10vw ;
+            }
+            height: 100%;
+            padding: 4rem 0;
+            overflow: hidden;
+            .row {
+                .col-12 {
+                    a {
+                        width: 22vw;
+                        .libro{
+                            font-size: 9vw;
+                        }
                     }
                 }
             }

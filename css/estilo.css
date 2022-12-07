@@ -1,106 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Quattrocento:wght@700&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
 
+html {
+  padding: 0; }
+
 main .container-fluid {
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   background-color: aqua; }
+  main .container-fluid h1 {
+    text-align: center;
+    font-size: 5vw;
+    font-style: italic; }
   main .container-fluid .row .col-12 {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap; }
-    main .container-fluid .row .col-12 .libro {
-      width: 5vw;
-      height: 30vh;
+    main .container-fluid .row .col-12 a {
+      width: 12vw;
+      height: 45vh;
       background: #f5f3f3;
       margin: 1rem 1rem 0.2rem 1rem;
       border: 2px solid black;
       border-radius: 10px 10px 0 0;
-      cursor: pointer; }
-      main .container-fluid .row .col-12 .libro:nth-child(1) {
-        background-color: blue;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        flex-direction: column; }
-      main .container-fluid .row .col-12 .libro:nth-child(2) {
-        background-color: burlywood;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        flex-direction: column; }
-      main .container-fluid .row .col-12 .libro:nth-child(3) {
-        background-color: brown;
+      cursor: pointer;
+      position: relative; }
+      main .container-fluid .row .col-12 a .libro {
+        width: 6rem;
+        height: 6rem;
+        background-color: white;
+        position: absolute;
+        border-radius: 50%;
+        border: 2px solid;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: black;
         display: flex;
         justify-content: center;
         align-items: center;
-        flex-direction: column; }
-      main .container-fluid .row .col-12 .libro:nth-child(4) {
-        background-color: #e21919;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column; }
-      main .container-fluid .row .col-12 .libro:nth-child(5) {
-        background-color: #91b103;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        flex-direction: column; }
-      main .container-fluid .row .col-12 .libro:nth-child(6) {
-        background-color: #0749ff;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        flex-direction: column; }
-      main .container-fluid .row .col-12 .libro:nth-child(7) {
-        background-color: #ee1086;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        flex-direction: column; }
-      main .container-fluid .row .col-12 .libro:nth-child(8) {
-        background-color: #22ff00;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        flex-direction: column; }
-      main .container-fluid .row .col-12 .libro:nth-child(9) {
-        background-color: #d4ad9a;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        flex-direction: column; }
-      main .container-fluid .row .col-12 .libro:nth-child(10) {
-        background-color: #0004f6;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column; }
-      main .container-fluid .row .col-12 .libro:nth-child(11) {
-        background-color: #fc003b;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        flex-direction: column; }
-      main .container-fluid .row .col-12 .libro:nth-child(12) {
-        background-color: #ff9100;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        flex-direction: column; }
-    main .container-fluid .row .col-12 .base {
-      width: 100%;
-      height: 2vh;
-      background-color: black;
-      flex-basis: 100%; }
+        flex-direction: row;
+        font-size: 3vw;
+        font-family: 'Quattrocento', serif; }
+      main .container-fluid .row .col-12 a::before {
+        content: "";
+        width: 100%;
+        height: 2rem;
+        border-top: 4px solid black;
+        border-bottom: 4px solid black;
+        display: block;
+        position: absolute;
+        margin-top: 2rem; }
+      main .container-fluid .row .col-12 a::after {
+        content: "";
+        background-color: rgba(0, 0, 0, 0.4);
+        height: 100%;
+        width: 100%;
+        display: block;
+        transform: scaleX(0);
+        transition: 0.4s all ease;
+        border-radius: 10px 10px 0 0; }
+        main .container-fluid .row .col-12 a::after:nth-child(1) {
+          background-color: blue; }
+      main .container-fluid .row .col-12 a:nth-child(1) {
+        background-color: blue; }
+        main .container-fluid .row .col-12 a:nth-child(1):hover::after {
+          transform: scaleX(1);
+          background-image: url(../assets/club_5am.jpg);
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover; }
+      main .container-fluid .row .col-12 a:nth-child(2) {
+        background-color: burlywood; }
+        main .container-fluid .row .col-12 a:nth-child(2):hover::after {
+          transform: scaleX(1);
+          background-image: url(../assets/1984.jpg);
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover; }
+      main .container-fluid .row .col-12 a:nth-child(3) {
+        background-color: brown; }
+        main .container-fluid .row .col-12 a:nth-child(3):hover::after {
+          transform: scaleX(1);
+          background-image: url(../assets/narnia.jpg);
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: 100% 100%; }
+      main .container-fluid .row .col-12 a:nth-child(4) {
+        background-color: #e21919; }
+        main .container-fluid .row .col-12 a:nth-child(4):hover::after {
+          transform: scaleX(1);
+          background-image: url(../assets/rey_arturo.jpg);
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: 100% 100%; }
+      main .container-fluid .row .col-12 a:nth-child(5) {
+        background-color: #91b103; }
+        main .container-fluid .row .col-12 a:nth-child(5):hover::after {
+          transform: scaleX(1);
+          background-image: url(../assets/quijote.jpg);
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: 100% 100%; }
+      main .container-fluid .row .col-12 a:nth-child(6) {
+        background-color: #0749ff; }
+        main .container-fluid .row .col-12 a:nth-child(6):hover::after {
+          transform: scaleX(1);
+          background-image: url(../assets/hrpotter.jpg);
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: 105% 100%; }
+      main .container-fluid .row .col-12 a:nth-child(7) {
+        background-color: #ee1086; }
+        main .container-fluid .row .col-12 a:nth-child(7):hover::after {
+          transform: scaleX(1);
+          background-image: url(../assets/vigilar_castigar.jpg);
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover; }
+      main .container-fluid .row .col-12 a:nth-child(8) {
+        background-color: #22ff00; }
+        main .container-fluid .row .col-12 a:nth-child(8):hover::after {
+          transform: scaleX(1);
+          background-image: url(../assets/padre_pobre.jpg);
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: 100% 100%; }
+      main .container-fluid .row .col-12 a:nth-child(9) {
+        background-color: #d4ad9a; }
+        main .container-fluid .row .col-12 a:nth-child(9):hover::after {
+          transform: scaleX(1);
+          background-image: url(../assets/diez_negritos.png);
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: 100% 100%; }
+      main .container-fluid .row .col-12 a:nth-child(10) {
+        background-color: #0004f6; }
+        main .container-fluid .row .col-12 a:nth-child(10):hover::after {
+          transform: scaleX(1);
+          background-image: url(../assets/drjekyll.jpg);
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: 100% 100%; }
+      main .container-fluid .row .col-12 a:nth-child(11) {
+        background-color: #fc003b; }
+        main .container-fluid .row .col-12 a:nth-child(11):hover::after {
+          transform: scaleX(1);
+          background-image: url(../assets/divinacomedia.jpg);
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover; }
+      main .container-fluid .row .col-12 a:nth-child(12) {
+        background-color: #ff9100; }
+        main .container-fluid .row .col-12 a:nth-child(12):hover::after {
+          transform: scaleX(1);
+          background-image: url(../assets/iliada.jpg);
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover; }
 
 .texto {
   vertical-align: bottom;
@@ -113,6 +174,14 @@ main .container-fluid {
   background: black;
   margin: 0.2rem 0; }
 
-@media (max-width: 1020px) {
-  main .container-fluid .row .col-12 .libro {
-    width: 10vw; } }
+@media (max-width: 772px) {
+  main .container-fluid {
+    height: 100%;
+    padding: 4rem 0;
+    overflow: hidden; }
+    main .container-fluid h1 {
+      font-size: 10vw; }
+    main .container-fluid .row .col-12 a {
+      width: 22vw; }
+      main .container-fluid .row .col-12 a .libro {
+        font-size: 9vw; } }
