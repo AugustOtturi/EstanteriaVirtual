@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@mixin flex($justify:normal, $align:stretch, $direction:row) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+}
+
+main{
+    .container-fluid{
+        height: 100vh;
+        width: 100vw;
+        background-color: aqua;
+        .row{
+            .col-12{
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50% , -50%);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                .libro{
+                    width: 5vw;
+                    height: 30vh;
+                    background: rgb(245, 243, 243);
+                    margin: 1rem 1rem 0.2rem 1rem;
+                    border: 2px solid black;
+                    border-radius: 10px 10px 0 0;
+                    cursor: pointer;
+                    &:nth-child(1){
+                        background-color: blue;
+                        @include flex(flex-start,center ,column)
+                    }
+                    &:nth-child(2){
+                        background-color:burlywood ;
+                        @include flex(flex-end,center ,column)
+                    }
+                    &:nth-child(3){
+                        background-color:brown ;
+                        @include flex(center,center ,column)
+                    }
+                    &:nth-child(4){
+                        background-color:rgb(226, 25, 25) ;
+                        @include flex(center,center ,column)
+                    }
+                    &:nth-child(5){
+                        background-color:rgb(145, 177, 3) ;
+                        @include flex(flex-end,center ,column)
+                    }
+                    &:nth-child(6){
+                        background-color:rgb(7, 73, 255) ;
+                        @include flex(flex-end,center ,column)
+                    }
+                    &:nth-child(7){
+                        background-color:rgb(238, 16, 134) ;
+                        @include flex(flex-start,center ,column)
+                    }
+                    &:nth-child(8){
+                        background-color:rgb(34, 255, 0) ;
+                        @include flex(flex-start,center ,column)
+                    }
+                    &:nth-child(9){
+                        background-color:rgb(212, 173, 154) ;
+                        @include flex(flex-start,center ,column)
+                    }
+                    &:nth-child(10){
+                        background-color:rgb(0, 4, 246) ;
+                        @include flex(center,center ,column)
+                    }
+                    &:nth-child(11){
+                        background-color:rgb(252, 0, 59) ;
+                        @include flex(flex-start,center ,column)
+                    }
+                    &:nth-child(12){
+                        background-color:rgb(255, 145, 0) ;
+                        @include flex(flex-end,center ,column)
+                    }
+                }
+               
+
+
+
+
+
+
+                .base{
+                    width: 100%;
+                    height: 2vh;
+                    background-color: black;
+                    flex-basis: 100%;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+.texto{
+   vertical-align: bottom;
+   margin-bottom: 0;
+   font-size: 1vw;
+}
+.linea{
+    width: 100%;
+    height: 2px;
+    background: black;
+    margin: 0.2rem 0;
+    
+}
+
+
+
+@media (max-width: 1020px){
+
+    main{
+        .container-fluid{
+            .row{
+                .col-12{
+                    .libro{
+                        width: 10vw;
+                    }
+                }
+            }
+        }
+    }
+}
